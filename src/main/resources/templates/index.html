@@ -2,29 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--响应式布局 适应各种设备-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Vic'bolg</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body{
+            padding-top: 50px;
+        }
+        .starter{
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <!--header-->
-    <header role="header">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <h1>
-                <a href="/" title=" avana LLC">
-                    <img src="../static/img/logo.PNG" style="width: 66px" title="avana LLC" alt=" LLC">
-                </a>
-                <nav role="header-nav" class="navy">
-                    <div id="menu-button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        "Navigation"
-                    </div>
-                </nav>
-                
-            </h1>
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Project Name</a>
 
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a> </li>
+                    <li><a href="#">About</a> </li>
+                    <li><a href="#">Contact</a> </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
+    <div class="container">
+        <div class="starter">
+            <h1>BootStrap Starter template</h1>
+            <p class="lead">Hello BootStrap !! Hello BootStrap !!  Hello BootStrap !!</p>
+        </div>
+    </div>
+    <!--&lt;!&ndash;header&ndash;&gt;-->
+    <!--<header role="header">-->
+        <!--<div class="container">-->
+            <!--<h1>-->
+                <!--<a href="/" title=" avana LLC">-->
+                    <!--<img src="../static/img/logo.PNG" style="width: 66px" title="avana LLC" alt=" LLC">-->
+                <!--</a>-->
+                <!--<nav role="header-nav" class="navy">-->
+                    <!--<div id="menu-button">-->
+                        <!--<span></span> -->
+                        <!--<span></span>-->
+                        <!--<span></span>-->
+                        <!--<span></span>-->
+                        <!--"Navigation"-->
+                    <!--</div>-->
+                <!--</nav>-->
+                <!---->
+            <!--</h1>-->
+
+        <!--</div>-->
+    <!--</header>-->
 </body>
 </html>

@@ -3,14 +3,15 @@
     padding: 0;
 }
 #login{
-    height: 408px;
+    height: 380px;
     width: 368px;
     position: absolute;
     /*background-color: white;*/
-    border: 1px;
+    border: 1px solid #ee7700;
     top: 20%;
     right: 15%;
     opacity: 80%;
+    box-shadow: white;
 }
 
 
@@ -41,17 +42,28 @@
     width: 100%;
     height: 42px;
     text-indent: 2.5rem;
+    border-top: none;
+    opacity: 0.6;
 }
 #login_commit{
-    width: 100%;
+    position: absolute;
     height: 45px;
     background-color: #ee7700;
     border: none;
     color: white;
     font-size: 18px;
+    left: 25px;
+    width: 320px;
 }
 body{
     background-image: url("../img/StarrySky.jpg");
     background-repeat: no-repeat;
-    background-size: 100% ;
+    background-size: cover;
+}
+#login .lgD img{
+    position:  absolute;
+    top: 12px;
+    left: 8px;
+
+    /*opacity: 100%;*/
 }

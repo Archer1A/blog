@@ -7,7 +7,7 @@
     width: 368px;
     position: absolute;
     /*background-color: white;*/
-    border: 1px solid #ee7700;
+    border: 1px solid #344660;
     top: 20%;
     right: 15%;
     opacity: 80%;
@@ -23,7 +23,7 @@
 }
 #login .login-title{
     width: 86%;
-    border-bottom: 1px solid #ee7700;
+    border-bottom: 1px solid #344660;
     margin-bottom: 60px ;
     margin-top:0px ;
     margin-right: auto;
@@ -48,7 +48,7 @@
 #login_commit{
     position: absolute;
     height: 45px;
-    background-color: #ee7700;
+    background-color: #344660;
     border: none;
     color: white;
     font-size: 18px;

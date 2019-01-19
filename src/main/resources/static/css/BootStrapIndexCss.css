@@ -1,3 +1,30 @@
+body{
+    background: url("../img/1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation-name:myfirst;
+    animation-duration:12s;
+    /*变换时间*/
+    animation-delay:2s;
+    /*动画开始时间*/
+    animation-iteration-count:infinite;
+    /*下一周期循环播放*/
+    animation-play-state:running;
+    /*动画开始运行*/
+}
+@keyframes myfirst
+{
+    0%   {background:url("../img/StarrySky.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;}
+    34%  {background:url("../img/1.jpg");}
+    67% {background:url("../img/StarrySky.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;}
+    100% {background:url("../img/1.jpg");}
+}
+
+
 .fa {
     display: inline-block;
     top: 27px;
@@ -7,3 +34,4 @@
 
 }
 input[type="text"], input[type="password"]{padding-left: 26px}
+.form{background: rgba(255,255,255,0.2);width:400px;margin:120px auto;}

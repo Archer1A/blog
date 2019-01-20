@@ -3,6 +3,7 @@ package com.vic.blog.Controller;
 import com.vic.blog.model.User;
 import org.hibernate.validator.constraints.pl.REGON;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,9 +22,12 @@ public class LoginController {
     }
 
     @GetMapping("index")
-    public ModelAndView Index(ModelAndView modelAndView){
-        modelAndView.setViewName("index");
-        return modelAndView;
+    public String Index(Model modelAndView){
+
+        modelAndView.addAttribute("img","/img/brage.jpg");
+        modelAndView.addAttribute("address","浙江-丽水");
+        modelAndView.addAttribute("time","2017年");
+        return "index";
     }
 
     @PostMapping("login")

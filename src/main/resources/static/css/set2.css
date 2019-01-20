@@ -93,6 +93,7 @@ figure.effect-oscar {
     background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);*/
 
     background-color: #fb5353;
+    margin-top: 20px;
 }
 figure.effect-oscar img {
     opacity: 1;
@@ -101,6 +102,11 @@ figure.effect-oscar img {
 }
 figure.effect-oscar figcaption {
     padding: 4em;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
     background-color: rgba(58,52,42,0);
     -webkit-transition: background-color 0.35s;
     transition: background-color 0.35s;
@@ -116,14 +122,21 @@ figure.effect-oscar figcaption::before {
 }
 figure.effect-oscar h2 {
     font-weight: 400;
+    color: #FFFFFF;
     margin: 20% 0 10px 0;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
 }
+figure.effect-oscar p {
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+}
 figure.effect-oscar h2 span {
-    font-weight: 800
+    font-weight: 800;
+    color: #FFFFFF;
+
 }
 figure.effect-oscar figcaption::before,  figure.effect-oscar p {
     font-weight: 400;
@@ -205,3 +218,4 @@ figure.effect-oscar:hover img {
         margin: 0 auto;
     }
 }
+

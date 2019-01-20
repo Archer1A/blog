@@ -20,6 +20,12 @@ public class LoginController {
         return  modelAndView;
     }
 
+    @GetMapping("index")
+    public ModelAndView Index(ModelAndView modelAndView){
+        modelAndView.setViewName("index");
+        return modelAndView;
+    }
+
     @PostMapping("login")
     public ModelAndView login(ModelAndView modelAndView, @Valid User user, BindingResult bindingResult) {
         System.out.println(user.getUserName());

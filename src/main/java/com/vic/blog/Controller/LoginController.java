@@ -16,15 +16,16 @@ import javax.validation.Valid;
 public class LoginController {
     @GetMapping("login")
     public ModelAndView login(ModelAndView modelAndView) {
-        modelAndView.setViewName("login");
+        modelAndView.setViewName("BootStrapIndex");
         return  modelAndView;
     }
 
     @PostMapping("login")
     public ModelAndView login(ModelAndView modelAndView, @Valid User user, BindingResult bindingResult) {
+        System.out.println(user.getUserName());
         if (bindingResult.hasErrors()){
             modelAndView.addObject("error", bindingResult.getFieldError().getDefaultMessage());
-            modelAndView.setViewName("login");
+            modelAndView.setViewName("BootStrapIndex");
             return modelAndView;
         }
         String userName = user.getUserName();
@@ -32,12 +33,12 @@ public class LoginController {
 
         if (!"admin".equals(userName)){
             modelAndView.addObject("error", "无此用户！");
-            modelAndView.setViewName("login");
+            modelAndView.setViewName("BootStrapIndex");
             return modelAndView;
         }
         if(!"123456".equals(password)){
             modelAndView.addObject("error","密码错误！");
-            modelAndView.setViewName("login");
+            modelAndView.setViewName("BootStrapIndex");
             return modelAndView;
         }
         modelAndView.addObject("userName",userName);

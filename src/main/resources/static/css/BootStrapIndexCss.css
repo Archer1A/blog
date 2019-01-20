@@ -2,7 +2,7 @@ body{
     background: url("../img/1.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    animation-name:myfirst;
+    /*animation-name:myfirst;*/
     animation-duration:12s;
     /*变换时间*/
     animation-delay:2s;

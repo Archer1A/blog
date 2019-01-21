@@ -20,19 +20,19 @@
          //   border: 1px solid #ddd;
            // border: 1px solid rgba(86,61,124,.2);
         }
-        figure.effect-oscar {
-            /*background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+        /*figure.effect-oscar {*/
+            /*!*background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);*/
 
-            background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);*/
+            /*background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);*!*/
 
-            background-color: #fb5353;
-            margin-top: 20px;
-        }
-        figure.effect-oscar img {
-            opacity: 1;
-            -webkit-transition: opacity 0.35s;
-            transition: opacity 0.35s;
-        }
+            /*background-color: #fb5353;*/
+            /*margin-top: 20px;*/
+        /*}*/
+        /*figure.effect-oscar img {*/
+            /*opacity: 1;*/
+            /*-webkit-transition: opacity 0.35s;*/
+            /*transition: opacity 0.35s;*/
+        /*}*/
         figure.effect-oscar figcaption {
             padding: 4em;
             position: absolute;
@@ -53,25 +53,25 @@
             border: 1px solid #fff;
             content: '';
         }
-        figure.effect-oscar h2 {
-            font-weight: 400;
-            color: #FFFFFF;
-            margin: 20% 0 10px 0;
-            -webkit-transition: -webkit-transform 0.35s;
-            transition: transform 0.35s;
-            -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-        }
-        figure.effect-oscar p {
-            color: #FFFFFF;
-            font-family: 'Open Sans', sans-serif;
-        }
-        figure.effect-oscar h2 span {
-            font-weight: 800;
-            color: #FFFFFF;
+        /*figure.effect-oscar h2 {*/
+            /*font-weight: 400;*/
+            /*color: #FFFFFF;*/
+            /*margin: 20% 0 10px 0;*/
+            /*-webkit-transition: -webkit-transform 0.35s;*/
+            /*transition: transform 0.35s;*/
+            /*-webkit-transform: translate3d(0, 100%, 0);*/
+            /*transform: translate3d(0, 100%, 0);*/
+        /*}*/
+        /*figure.effect-oscar p {*/
+            /*color: #FFFFFF;*/
+            /*font-family: 'Open Sans', sans-serif;*/
+        /*}*/
+        /*figure.effect-oscar h2 span {*/
+            /*font-weight: 800;*/
+            /*color: #FFFFFF;*/
 
-        }
-        figure.effect-oscar figcaption::before,  figure.effect-oscar p {
+        /*}*/
+        figure.effect-oscar figcaption::before ,  figure.effect-oscar p{
             font-weight: 400;
             opacity: 0;
             -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -79,40 +79,65 @@
             -webkit-transform: scale(0);
             transform: scale(0);
         }
-        figure.effect-oscar:hover h2 {
-            -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-        }
-        figure.effect-oscar:hover figcaption::before,  figure.effect-oscar:hover p {
+        /*figure.effect-oscar:hover h2 {*/
+            /*-webkit-transform: translate3d(0, 0, 0);*/
+            /*transform: translate3d(0, 0, 0);*/
+        /*}*/
+        figure.effect-oscar:hover figcaption::before,  figure.effect-oscar p{
             opacity: 1;
             -webkit-transform: scale(1);
             transform: scale(1);
         }
-        figure.effect-oscar:hover figcaption {
-            background-color: rgba(58,52,42,0);
+        /*figure.effect-oscar:hover figcaption {*/
+            /*background-color: rgba(58,52,42,0);*/
+        /*}*/
+        /*figure.effect-oscar:hover img {*/
+            /*opacity: 0.4;*/
+        /*}*/
+
+        figure.effect-oscar{
+            background-color: red;
         }
-        figure.effect-oscar:hover img {
-            opacity: 0.4;
+        figure.effect-oscar img{
+            opacity: 1;
+            -webkit-transition: opacity 2s;
         }
+        figure.effect-oscar:hover img  {
+            opacity: 0.5;
+        }
+        /*figure.effect-oscar figcaption{*/
+            /*position: absolute;*/
+            /*top: 30px;*/
+            /*left: 50px;*/
+            /*bottom: 20px;*/
+            /*right: 20px;*/
+            /*border: #eeeeee solid 1px;*/
+        /*}*/
+        figure.effect-oscar {
 
-
-
-
-
-
-
-
-
+        }
         div.test{
             width: 200px;
             height: 200px;
             background-color: #0d0d0d;
-            -webkit-transition: width 2s;
-            transition: width 2s;
+            opacity: 0.5;
+            -webkit-transition-property: opacity,width;
+            -webkit-transition-duration: 2s;
+            //transition: width 2s;
+
+        }
+        div.test2{
+            width: 150px;
+            height: 200px;
+            background-color: red;
+            opacity: 0.1;
+            -webkit-transition:opacity  2s;
+            transition:width  2s;
+
         }
         div.test:hover {
             width: 500px;
-            opacity: 40%;
+            opacity: 1;
 
         }
     </style>
@@ -169,6 +194,9 @@
 <div class="container">
     <div  class="test">
 
+aaa
+    </div>
+    <div class="test2">
 
     </div>
 </div>

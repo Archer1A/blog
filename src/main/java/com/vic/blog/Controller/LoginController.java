@@ -24,9 +24,9 @@ public class LoginController {
     @GetMapping("index")
     public String Index(Model modelAndView){
 
-        modelAndView.addAttribute("img","/img/brage.jpg");
-        modelAndView.addAttribute("address","浙江-丽水");
-        modelAndView.addAttribute("time","2017年");
+//        modelAndView.addAttribute("img","/img/brage.jpg");
+//        modelAndView.addAttribute("address","浙江-丽水");
+//        modelAndView.addAttribute("time","2017年");
         return "index";
     }
 

@@ -55,7 +55,7 @@
                 </article>
             </section>
             <th:block th:each="articleCover,articleCoverStat:${articleCovers}">
-                <!--<th:block th:if="${articleCoverStat.index == 1} ">-->
+                <th:block th:if="${articleCoverStat.index == 0} ">
                     <section class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
                         <figure class="effect-oscar">
                             <img  th:src="${articleCover.imgUrl}" src="../static/img/blue1.jpg" alt="" class="img-responsive">
@@ -66,7 +66,7 @@
                         </figure>
 
                     </section>
-                <!--</th:block>-->
+                </th:block>
             </th:block>
 
 

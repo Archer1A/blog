@@ -54,32 +54,38 @@
 
                 </article>
             </section>
-            <section class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                <figure class="effect-oscar">
-                    <img  th:src="@{~/img/blue1.jpg}" src="../static/img/blue1.jpg" alt="" class="img-responsive">
-                <figcaption>
-                    <h2>丽江-蓝月湖</h2>
-                    <p>24 十二月 2018</p>
-                </figcaption>
-                </figure>
+            <th:block th:each="articleCover,articleCoverStat:${articleCovers}">
+                <!--<th:block th:if="${articleCoverStat.index == 1} ">-->
+                    <section class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+                        <figure class="effect-oscar">
+                            <img  th:src="${articleCover.imgUrl}" src="../static/img/blue1.jpg" alt="" class="img-responsive">
+                            <figcaption>
+                                <h2><th:block th:text="${articleCover.address}">丽江-蓝月湖</th:block></h2>
+                                <p><th:block th:text="${articleCover.time}">24 十二月 2018</th:block></p>
+                            </figcaption>
+                        </figure>
 
-            </section>
-            <section class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
-                <figure class="effect-oscar"><img  th:src="@{~/img/snowman.jpg}" src="../static/img/IMG_20180128_125432.jpg" alt="" class="img-responsive">
-                    <figcaption>
-                        <h2>杭州-西湖</h2>
-                        <p> 一月 2018</p>
-                    </figcaption>
-                </figure>
-            </section>
-            <section class="col-xs-12 col-md-6 col-sm-6 col-lg-6" id="grid">
-                <figure class="effect-oscar"><img  th:src="@{~/img/bridge.jpg}" src="../static/img/brage.jpg" alt="" class="img-responsive">
-                    <figcaption>
-                        <h2>杭州-西湖</h2>
-                        <p> 一月 2018</p>
-                    </figcaption>
-                </figure>
-            </section>
+                    </section>
+                <!--</th:block>-->
+            </th:block>
+
+
+            <!--<section class="col-xs-12 col-md-6 col-sm-6 col-lg-6">-->
+                <!--<figure class="effect-oscar"><img  th:src="@{~/img/snowman.jpg}" src="../static/img/IMG_20180128_125432.jpg" alt="" class="img-responsive">-->
+                    <!--<figcaption>-->
+                        <!--<h2>杭州-西湖</h2>-->
+                        <!--<p> 一月 2018</p>-->
+                    <!--</figcaption>-->
+                <!--</figure>-->
+            <!--</section>-->
+            <!--<section class="col-xs-12 col-md-6 col-sm-6 col-lg-6" id="grid">-->
+                <!--<figure class="effect-oscar"><img  th:src="@{~/img/bridge.jpg}" src="../static/img/brage.jpg" alt="" class="img-responsive">-->
+                    <!--<figcaption>-->
+                        <!--<h2>杭州-西湖</h2>-->
+                        <!--<p> 一月 2018</p>-->
+                    <!--</figcaption>-->
+                <!--</figure>-->
+            <!--</section>-->
             <!--<section class="col-xs-12 col-md-6 col-sm-6 col-lg-6" >-->
                 <!--<figure class="effect-oscar"><img  th:src="@{${img}}" src="../static/img/brage.jpg" alt="" class="img-responsive">-->
                     <!--<figcaption>-->

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +26,8 @@ public class LoginController {
         return  modelAndView;
     }
 
-    @GetMapping("index")
-    public String Index(Model modelAndView){
+    @GetMapping( "index")
+    public String Index(Model modelAndView,HttpServletRequest request){
         List<ArticleCover> articleCovers = new ArrayList<>();
         ArticleCover articleCover = new ArticleCover();
         articleCover.setAddress("云南-丽江");
@@ -33,13 +35,20 @@ public class LoginController {
         articleCover.setImgUrl("/img/blue1.jpg");
         articleCovers.add(articleCover);
         modelAndView.addAttribute("articleCovers",articleCovers);
+        HttpSession session = request.getSession();
+        if (session.getAttribute("userName") != null){
+            System.out.println(  session.getAttribute("userName"));
+
+        }else {
+            System.out.println("dont have session");
+        }
 //        modelAndView.addAttribute("address","浙江-丽水");
 //        modelAndView.addAttribute("time","2017年");
         return "index";
     }
 
     @PostMapping("login")
-    public ModelAndView login(ModelAndView modelAndView, @Valid User user, BindingResult bindingResult) {
+    public ModelAndView login(ModelAndView modelAndView, @Valid User user, BindingResult bindingResult, HttpServletRequest request) {
         System.out.println(user.getUserName());
         if (bindingResult.hasErrors()){
             modelAndView.addObject("error", bindingResult.getFieldError().getDefaultMessage());
@@ -59,8 +68,17 @@ public class LoginController {
             modelAndView.setViewName("BootStrapIndex");
             return modelAndView;
         }
-        modelAndView.addObject("userName",userName);
-        modelAndView.setViewName("index");
+       // modelAndView.addObject("userName",userName);
+//       / modelAndView = new ModelAndView("")
+
+        HttpSession session = request.getSession();
+        if (session.getAttribute("userName") == null){
+            session.setAttribute("userName",userName);
+        }else {
+            session.getAttribute("userName");
+            System.out.println("session");
+        }
+        modelAndView.setViewName("redirect:/index");
         return modelAndView;
 
     }

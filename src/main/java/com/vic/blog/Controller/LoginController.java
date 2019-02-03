@@ -1,5 +1,6 @@
 package com.vic.blog.Controller;
 
+import com.vic.blog.aspect.annotation.LogAnnotation;
 import com.vic.blog.model.ArticleCover;
 import com.vic.blog.model.User;
 import org.hibernate.validator.constraints.pl.REGON;
@@ -21,6 +22,7 @@ import java.util.List;
 @RequestMapping("/")
 public class LoginController {
     @GetMapping("login")
+    @LogAnnotation(name = "注解式拦截器")
     public ModelAndView login(ModelAndView modelAndView) {
         modelAndView.setViewName("BootStrapIndex");
         return  modelAndView;

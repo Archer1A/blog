@@ -32,6 +32,7 @@ public class LoginTimeInterceptor extends HandlerInterceptorAdapter {
         System.out.println("执行preHandle方法-->01");
         HttpSession session = request.getSession();
         String user = (String) session.getAttribute("userName");
+        String uri =  request.getRequestURL().toString();
         if (user != null){
             return true; //通过拦截器，继续执行
         }else {

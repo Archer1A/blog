@@ -29,7 +29,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(loginTimeInterceptor).addPathPatterns("/**").excludePathPatterns("/login","/index");
+        registry.addInterceptor(loginTimeInterceptor).addPathPatterns("/**").excludePathPatterns("/login","/img/**","/css/**","BootStrap-3.3.7-dist/**");
 
     }
 }
